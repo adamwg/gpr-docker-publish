@@ -17,7 +17,7 @@ SHA_NAME="${BASE_NAME}:${shortSHA}"
 
 # Add Arguments For Caching
 BUILDPARAMS=""
-if [ "${INPUT_CACHE}" == "true" ]; then
+if [ "${INPUT_CACHE:-}" == "true" ]; then
    # try to pull container if exists
    if docker pull ${BASE_NAME} 2>/dev/null; then
       echo "Attempting to use ${BASE_NAME} as build cache."
