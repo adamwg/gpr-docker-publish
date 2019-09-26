@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euo pipefail
+
 #Publish Docker Container To GitHub Package Registry
 ####################################################
 
